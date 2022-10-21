@@ -17,9 +17,12 @@ public BookingDao()
 	session=factory.openSession();
 	trans=session.beginTransaction();
 }
-public void insert(BookingDetails details)
+public int insert(BookingDetails details)
 {
-	session.save(details);
+	int id=(Integer)session.save(details);
 	trans.commit();
+	
+	return id;
 }
+
 }

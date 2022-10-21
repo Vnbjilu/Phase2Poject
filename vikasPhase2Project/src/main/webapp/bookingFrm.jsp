@@ -4,26 +4,26 @@
 Flights flight=(Flights)request.getAttribute("flight");
 %>
 <div class="content" align="center">
-<form action="Booking">
+<form action="Booking" Method="post">
 <table>
 <tr align="center">
 	<td colspan="2"> Booking Page </td>
 </tr>
 <tr>
 	<td>Booking Date</td>
-	<Td><input type="date" name="bookingDate"></Td>
+	<Td><input type="date" name="bookingDate" required></Td>
 </tr>
 <tr>
 	<Td>Customer Name</Td>
-	<td><input type="text" name="customerName"></td>
+	<td><input type="text" name="customerName" required ></td>
 </tr>
 <tr>
 	<td> Customer Email</td>
-	<td><input type="email" name=customerEmail"></td>
+	<td><input type="email" name=customerEmail" required></td>
 </tr>
 <tr>
 	<Td> Customer Contact</Td>
-	<td><input type="text" name="customerContact"></td>
+	<td><input type="text" name="customerContact" required></td>
 </tr>
 <tr>
 	<td>Flight Number</td>
@@ -48,7 +48,7 @@ Flights flight=(Flights)request.getAttribute("flight");
 <tR>
 	<Td colspan="2"> <input type="submit" value="next"></Td></tR> 
   </table>
-  <input type="hidden" name="action" value="Add">
+  <input type="hidden" name="action" value="Book">
 </form>
 </main>
 
