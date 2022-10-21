@@ -37,9 +37,24 @@
 		<servlet-class>vikas.RatanRaman.SiteController.Controller</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name> SiteController</servlet-name>
+		<servlet-name>SiteController</servlet-name>
 		<url-pattern>/Main</url-pattern>
+	</servlet-mapping>
+	
+	<!--  End of Site Controller  -->
+	
+	<!--  configuration of Booking Controller  -->
+	<servlet>
+		<servlet-name>BookingController</servlet-name>
+		<display-name>BookingController</display-name>
+		<description></description>
+		<servlet-class>vikas.RatanRaman.Booking.BookingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookingController</servlet-name>
+		<url-pattern>/Booking</url-pattern>
 	</servlet-mapping>
 
 </web-app>

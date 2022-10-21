@@ -47,7 +47,7 @@ else
 		<th><%=tmp.getDepartTime() %></th>
 		<th><%=tmp.getCapacity() %></th>
 		<th><%=tmp.getFair() %></th>
-		<th><a href='book.jsp'>Book Ticket</a></th>
+		<th><a href="Main?action=book&value=<%=tmp.getFlightNumber()%>">Book Ticket</a></th>
 		
 	</tr>
 			

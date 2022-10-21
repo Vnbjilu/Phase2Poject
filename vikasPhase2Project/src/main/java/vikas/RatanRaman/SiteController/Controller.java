@@ -37,7 +37,18 @@ public class Controller extends HttpServlet {
 				SearchFlight(request,response);
 			else if(action.equals("searchFrm"))
 				searchFrmShow(request,response);
+			else if(action.equalsIgnoreCase("book"))
+				bookFrmshow(request,response);
+			
 		}
+	}
+
+	private void bookFrmshow(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String fl=request.getParameter("value");
+		FlightDao dao=new FlightDao();
+		Flights flight=dao.getSpecficRecordById(fl);
+		request.setAttribute("flight", flight);
+		request.getRequestDispatcher("bookingFrm.jsp").forward(request, response);
 	}
 
 	private void searchFrmShow(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
