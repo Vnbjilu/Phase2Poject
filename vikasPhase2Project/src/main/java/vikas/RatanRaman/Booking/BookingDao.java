@@ -12,6 +12,14 @@ public class BookingDao {
 	Transaction trans;
 public BookingDao()
 {
-	
+	cfg=new Configuration().configure("hibernate.cfg.xml");
+	factory=cfg.buildSessionFactory();
+	session=factory.openSession();
+	trans=session.beginTransaction();
+}
+public void insert(BookingDetails details)
+{
+	session.save(details);
+	trans.commit();
 }
 }

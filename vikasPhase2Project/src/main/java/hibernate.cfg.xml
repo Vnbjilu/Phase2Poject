@@ -18,6 +18,7 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping class="vikas.RatanRaman.User.User"/>
         <mapping class="vikas.RatanRaman.Flight.Flights"/>
+        <mapping class="vikas.RatanRaman.Booking.BookingDetails"/>
         
  
         
