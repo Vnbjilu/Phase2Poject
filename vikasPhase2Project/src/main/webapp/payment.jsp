@@ -26,14 +26,14 @@ BookingDetails details=(BookingDetails)request.getAttribute("details");
 </tr>
 <tr>
 	<td> Customer Name</td>
-	<td> <input type="text" name="CustomerName" value="<%=details.getCustomerName()%>"></td>
+	<td> <input type="text" name="customerName" value="<%=details.getCustomerName()%>"></td>
 </tr>
 <tr>
 	<Td> FlightNumber </Td>
 	<td><input type="text" name="flightNumber" value="<%=details.getFlightNumber()%>"></td>
 </tr>
 	<Td> Journey Date </Td>
-	<td><input type="date" name="bookingdate" value="<%=details.getBookingDate()%>"></td>
+	<td><input type="date" name="bookingDate" value="<%=details.getBookingDate()%>"></td>
 </tr>
 <tr>
 	<td> DepartTime</td>

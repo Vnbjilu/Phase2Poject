@@ -52,11 +52,12 @@ public class BookingController extends HttpServlet {
 		pay.setDepartTime(request.getParameter("departTime"));
 		pay.setBookingId(Integer.parseInt(request.getParameter("bookingId")));
 		pay.setFlightNumber(request.getParameter("flightNumber"));;
-		pay.setBookingId(Integer.parseInt(request.getParameter("bookingId")));
+		
 		PaymentDao Dao=new PaymentDao();
 		int id=Dao.insert(pay);
 		String msg="Your Ticket number ="+id;
 		request.setAttribute("msg", msg);
+		request.setAttribute("id", id);
 		request.getRequestDispatcher("ticket.jsp").forward(request, response);
 		
 		

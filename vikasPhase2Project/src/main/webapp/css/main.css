@@ -10,10 +10,10 @@
 	
 	background-color:#039590;
 	color:white;
-	width:75%;
-	height:100px;
-	margin:50px;
-	margin-left:200px;
+	width:100%;
+	height:150px;
+	margin:20px;
+	margin-left:100px;
 	
 	
 }
@@ -100,4 +100,18 @@ footer marquee
 {
 	
 	width:90%;
+}
+.ticket
+{
+	text-align:center;
+	color:white;
+}
+.ticket tr
+{
+	text-align:center;
+	color:white;
+}
+.ticket tr:hover
+{
+	color:pink;
 }

@@ -41,12 +41,9 @@ public List<User> display()
 }
 public User getSpecficRecordById(int id)
 {
-	
 	User user=(User)session.get(User.class, id);
 	return user;
-	
-	
-			
+		
 	
 }
 public String getUpate(User e)
@@ -54,6 +51,16 @@ public String getUpate(User e)
 	session.update(e);
 	trans.commit();
 	return "User id => "+e.getUserId()+" is updated Succesfully";
+	
+}
+public List<User> login(String userName,String userPassword)
+{
+	String d="from User e where e.userName=:i and e.userPassword=:j";
+	Query query=session.createQuery(d);
+	query.setParameter("i", userName);
+	query.setParameter("j", userPassword);
+	List<User> user=query.list();
+	return user;
 	
 }
 }

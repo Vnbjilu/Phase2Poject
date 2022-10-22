@@ -29,7 +29,7 @@ public class Payment {
 	private String bankName;
 	@Column(length=12)
 	private String flightNumber;
-	@Column(length=12)
+	@Column(length=16)
 	private String bookingDate;
 	
 	private int fare;
